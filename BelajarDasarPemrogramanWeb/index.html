@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="assets/styles/style.css"> -->
+
+    <style>
+        .box {
+            border-top-style: solid;
+            border-right-style: dotted;
+            border-bottom-style: groove;
+            border-left-style: double;
+
+            border-width: 4px;
+            border-color: red;
+            width: 200px;
+            height: 50px;
+
+            /* menggunakan rgb format */
+            border-color: rgb(80, 138, 212);
+
+            /* menggunakan format hex */
+            border-color: #4ee717;
+
+            /* menggunakan nama warna */
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+    </div>
+    <p>Elemen menerapkan <code>box-sizing: content-box;</code> Ukuran box secara keseluruhan akan menjadi 260px lebar,
+        260px tinggi; 260 = 200 + 20 + 20 + 10 + 10</p>
+    <br>
+    <div class="box">
+    </div>
+    <p>Elemen menerapkan <code>box-sizing: border-box;</code> Ukuran box akan tetap 200px lebar, 200px tinggi meskipun
+        menerapkan padding dan border</p>
+
+    <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius error explicabo ipsum molestiae
+        necessitatibus nesciunt possimus reprehenderit sed voluptates. Aliquam aspernatur autem est nobis officia
+        praesentium quas recusandae rem.</blockquote>
+
+    <div>
+        <p>Paragraf pertama. di dalam div.</p>
+        <p>Paragraf kedua. di dalam div.</p>
+        <section>
+            <p>Paragraf ketiga. di dalam div namun bukan sebagai anak elemen secara langsung.</p>
+        </section>
+        <p>Paragraf keempat. di dalam div.</p>
+    </div>
+    <p>Paragraf kelima. di luar div.</p>
+    <p>Paragraf keenam. di luar div.</p>
+
+    <p>Ini merupakan paragraf pertama. Rule styling tidak akan diterapkan pada elemen paragraf ini.</p>
+    <img src="https://www.dicoding.com/blog/wp-content/uploads/2014/12/dicoding-header-logo.png" alt="Dicoding logo"
+        width="400px">
+    <p>Ini merupakan paragraf kedua dan ditetapkan setelah elemen gambar. Maka paragraf ini menerapkan rule dengan
+        menampilkan teks berwarna hijau.</p>
+    <div>
+        <p>Ini merupakan paragraf ketiga, letaknya setelah elemen gambar, namun paragraf ini dibungkus di dalam div
+            sehingga paragraf ini tidak akan menerapkan rule styling karena tidak memiliki induk yang sama.</p>
+    </div>
+    <p>Ini merupakan paragraf empat. Letaknya memang setelah elemen gambar dan memiliki induk yang sama seperti elemen
+        gambar, sehingga elemen ini akan menerapkan rule dengan menampilkan teks berwarna hijau.</p>
+
+    <p>Ini merupakan paragraf pertama. Rule styling tidak akan diterapkan pada elemen paragraf ini.</p>
+    <img src="https://www.dicoding.com/blog/wp-content/uploads/2014/12/dicoding-header-logo.png" alt="Dicoding logo"
+        width="400px">
+    <p>Ini merupakan paragraf kedua dan ditetapkan setelah elemen gambar. Maka paragraf ini seharusnya menerapkan rule
+        dengan menampilkan teks berwarna hijau.</p>
+    <p>Ini merupakan paragraf ketiga. Letaknya memang setelah elemen gambar, namun tidak diletakkan persis setelahnya,
+        sehingga rule tidak akan diterapkan pada elemen ini.</p>
+
+    <p>
+        Ini merupakan paragraf biasa atau tidak menerapkan atribut apapun. Maka teks pada paragraf ini akan berwarna
+    </p>
+    <p lang="en-us">
+        This is an English paragraph contains en-us value of lang attribute, so this text will be green and
+        italic.
+    </p>
+
+    <h1>Ini merupakan sebuah header biasa</h1>
+    <h1 lang="en-us">This is an English Header</h1>
+
+    <p class="warning">
+        Perhatikan paragraf ini! Paragraf ini merupakan paragraf yang memiliki kelas bernilai warning,
+        sehingga teks dari paragraf ini akan berwarna merah
+    </p>
+
+    <div id="content">
+        <p>
+            Ini merupakan sebuah teks di dalam sebuah div yang memiliki id bernilai "content", seharusnya paragraf ini
+            dibungkus dalam border yang memiliki padding 20px
+        </p>
+    </div>
+
+    <ul>
+        <li><a href="#internal">Internal link</a></li>
+        <li><a href="http://example.com">Example link</a></li>
+        <li><a href="#InSensitive">Insensitive internal link</a></li>
+        <li><a href="http://example.org">Example org link</a></li>
+    </ul>
+
+    <div id="special">
+        <p>Ini merupakan konten di dalam sebuah div yang diberi id special.</p>
+    </div>
+    <div>
+        <p>Ini merupakan konten di dalam sebuah div biasa.</p>
+    </div>
+
+    <h1 class="fancy">Heading dengan teks bergaya fancy</h1>
+    <p class="fancy">Paragraf dengan teks bergaya fancy</p>
+    <h1 class="red skyblue-bg">Heading dengan teks berwarna merah dan background biru langit</h1>
+    <p class="red fancy">Paragraf dengan teks berwarna merah dan bergaya fancy</p>
+    <h1 class="red">Heading dengan teks berwarna merah</h1>
+    <p class="red">Paragraf dengan teks berwarna merah</p>
+    <p class="skyblue-bg">Paragraf dengan background berwarna biru langit</p>
+    <p class="fancy">Paragraf dengan gaya fancy</p>
+    <p>Paragraf yang menampilkan teks dengan warna standar tanpa menerapkan styling</p>
+
+
+    <span>Ini merupakan sebuah teks yang berada pada elemen span. Seharusnya elemen ini ditampilkan dengan warna teks
+        merah.</span>
+    <p>Ini merupakan sebuah teks yang berada pada elemen paragraf, teks ini tidak seharusnya tidak akan terpengaruh oleh
+        rule.</p>
+    <span>Ini merupakan sebuah teks yang berada pada elemen span lainnya. Seharusnya elemen ini ditampilkan dengan warna
+        teks merah juga.</span>
+    <article>
+        <section>
+            <h2>Wisata</h2>
+            <p>Sejak dibukanya Jalan Tol Cipularang, kota Bandung telah menjadi tujuan utama dalam menikmati liburan
+                akhir pekan
+                terutama dari masyarakat yang berasal dari Jakarta sekitarnya. Selain menjadi kota wisata belanja, kota
+                Bandung
+                juga dikenal dengan sejumlah besar bangunan lama berarsitektur peninggalan Belanda.</p>
+        </section>
+        <section>
+            <h3>Farm House Lembang</h3>
+            <img src="assets/image/farm-house.jpg">
+            <p>Kota Bandung dikelilingi oleh pegunungan, sehingga bentuk morfologi wilayahnya bagaikan sebuah mangkok
+                raksasa,[9] secara geografis kota ini terletak di tengah-tengah provinsi Jawa Barat, serta berada pada
+                ketinggian
+                ±768 m di atas permukaan laut, dengan titik tertinggi di berada di sebelah utara dengan ketinggian 1.050
+                meter di
+                atas permukaan laut dan sebelah selatan merupakan kawasan rendah dengan ketinggian 675 meter di atas
+                permukaan
+                laut.</p>
+        </section>
+        <section>
+            <h3>Observatorium Bosscha</h3>
+            <img src="assets/image/bosscha.jpg">
+            <p>Memiliki beberapa teleskop, antara lain, Refraktor Ganda Zeiss, Schmidt Bimasakti, Refraktor Bamberg,
+                Cassegrain
+                GOTO, dan Teleskop Surya. Refraktor Ganda Zeiss adalah jenis teleskop terbesar untuk meneropong bintang.
+                Benda ini
+                diletakkan pada atap kubah sehingga saat teropong digunakan, atap tersebut harus dibuka. Observatorium
+                Bosscha
+                boleh dikunjungi oleh siapa pun, tanpa tiket. Namun, bagi yang ingin menggunakan teleskop Zeiss, wajib
+                mendaftarkan diri. Untuk instansi atau lembaga pendidikan, diberikan jadwal hari Selasa sampai Jumat.
+                Sementara
+                itu, kunjungan individu dibuka setiap hari Sabtu.</p>
+        </section>
+    </article>
+
+    <aside>
+        <article>
+            <header>
+                <h2>Kota Bandung</h2>
+                <p>Kota Kembang Paris van Java</p>
+                <figure>
+                    <img src="assets/image/history.jpg">
+                    <figcaption>Lambang</figcaption>
+                </figure>
+            </header>
+        </article>
+    </aside>
+    <article>
+        <h2>Sejarah</h2>
+        <img src="assets/image/history.jpg">
+        <p>Kata Bandung berasal dari kata bendung atau bendungan karena terbendungnya sungai Citarum oleh lava Gunung
+            Tangkuban Parahu yang lalu membentuk telaga...</p>
+    </article>
+    <article>
+        <h2>Geografis</h2>
+        <img src="assets/image/geografis.jpg">
+        <p>Kota Bandung dikelilingi oleh pegunungan, sehingga bentuk morfologi wilayahnya bagaikan sebuah mangkok
+            raksasa,[9]
+            secara geografis kota ini terletak di tengah-tengah provinsi Jawa Barat..</p>
+    </article>
+    <article>
+        <h2>Wisata</h2>
+        <img src="assets/image/farm-house.jpg">
+        <p>Sejak dibukanya Jalan Tol Cipularang, kota Bandung telah menjadi tujuan utama dalam menikmati liburan akhir
+            pekan
+            terutama dari masyarakat yang berasal dari Jakarta sekitarnya...</p>
+    </article>
+    <header>
+        <!-- Konten header website -->
+        <h1>Judul Artikel</h1>
+        <h2>Oleh: Dicoding Indonesia</h2>
+    </header>
+    <main>
+        <section>
+            <article>
+                <p>Sebuah article</p>
+            </article>
+        </section>
+        <article>
+            <p>Sebuah article lain</p>
+        </article>
+    </main>
+    <footer>
+        <!-- Konten footer website -->
+        <p>Bagikan artikel ini melalui</p>
+        <ul>
+            <li>Twitter</li>
+            <li>Facebook</li>
+            <li>......</li>
+        </ul>
+    </footer>
+
+    <header>
+        <h1>Judul Artikel</h1>
+        <h2>Oleh: Dicoding Indonesia</h2>
+    </header>
+    <p>....... Konten artikel dimulai dari sini ......</p>
+    <footer>
+        <p>Bagikan artikel ini melalui</p>
+        <ul>
+            <li>Twitter</li>
+            <li>Facebook</li>
+            <li>......</li>
+        </ul>
+    </footer>
+
+    <header>
+        <h1>Bandung</h1>
+        <p>Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.</p>
+        <nav>
+            <ul>
+                <li><a href="#sejarah">Sejarah</a></li>
+                <li><a href="#geografis">Geografis</a></li>
+                <li><a href="#wisata">Wisata</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <footer>
+        &copy; 2019, Dicoding Academy
+    </footer>
+
+    <ul>
+        <li><a href="#sejarah">Sejarah</a></li>
+        <li><a href="#geografis">Geografis</a></li>
+        <li><a href="#wisata">Wisata</a></li>
+    </ul>
+
+    <p>Ini adalah periode perang saudara. Pesawat ruang angkasa pemberontak, menyerang dari pangkalan tersembunyi, telah
+        memenangkan kemenangan pertama mereka melawan Kekaisaran Galactic yang jahat. Selama pertempuran,
+        <mark>mata-mata
+            Pemberontak berhasil mencuri rencana rahasia
+        </mark>
+        ke senjata pamungkas Kekaisaran, STAR DEATH, stasiun ruang angkasa
+        berlapis baja dengan kekuatan yang cukup untuk menghancurkan seluruh planet.
+    </p>
+
+    <p>Sukrosa merupakan suatu disakarida yang dibentuk dari monomer-monomernya yang berupa unit glukosa dan
+        fruktosa,dengan rumus molekul C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>.</p>
+
+    <p>Salah satu persamaan paling umum dalam semua fisika adalah E=MC<sup>2</sup></p>
+
+
+    <p><dfn>Website</dfn> merupakan halaman yang menampilkan informasi melalui teks atau gambar. Website dapat diakses
+        melalui internet dengan menggunakan browser.</p>
+    <p>Informasi selengkapnya bisa Anda dapatkan di <cite><a href="https://dicoding.com">dicoding.com</a></cite>.</p>
+
+    <p>Sebelum pulang kerja, ia berkata kepadaku: <q>Maaf saya tidak bisa hadir dalam pertemuan nanti</q></p>
+
+    <p>Kesehatan merupakan hal yang penting, jaga pola makan yang teratur dan <strong>jangan sampai makan tengah
+            malam!</strong></p>
+
+    <p><em>Oding</em> adalah seorang pelajar</p>
+    <p>Dia adalah seorang <em>pelajar</em></p>
+
+    <p>Hubungi kami di</p>
+    <ul>
+        <li><a href="https://example.com">Website</a></li>
+        <li><a href="mailto:info@example.com">Email</a></li>
+        <li><a href="tel:+62123456">Telepon</a></li>
+        <li><a href="#address">Alamat</a></li>
+    </ul>
+
+    <figure>
+        <pre>
+                SAJAK PUTIH
+      
+            Bersandar pada tari warna pelangi
+            Kau depanku bertudung sutra senja
+            Di hitam matamu kembang mawar dan melati
+            Harum rambutmu mengalun bergelut senda
+      
+            Sepi menyanyi, malam dalam mendoa tiba
+            Meriak muka air kolam jiwa
+            Dan dalam dadaku memerdu lagu
+            Menarik menari seluruh aku
+      
+            Hidup dari hidupku, pintu terbuka
+            Selama matamu bagiku menengadah
+            Selama kau darah mengalir dari luka
+            Antara kita Mati datang tidak membelah...
+        </pre>
+        <figcaption>Sajak Putih oleh Charil Anwar</figcaption>
+    </figure>
+
+
+    <p>Dicoding adalah sebuah perusahaan startup yang bertujuan mengembangkan ekosistem developer di Indonesia.
+        Berdiri sejak 5 Januari 2015, Dicoding memiliki platform pembelajaran elektronik di laman Dicoding.com.</p>
+    <figure>
+        <img src="https://github.com/dicodingacademy/BelajarDasarPemrogramanWeb/raw/image-assets/dicoding-logo.png"
+            alt="Sicoding Logo" width="200px">
+        <figcaption>Dicoding</figcaption>
+    </figure>
+    <p>Materi perdana yang menjadi magnet dari awal berdirinya Dicoding hingga kini adalah kelas Menjadi Android
+        Developer
+        Expert. Kelas ini dikembangkan oleh Google Developer Expert in Android, Sidiq Permana dan Head of Dicoding
+        Academy,
+        Ahmad Imaduddin. Seperti halnya kelas Picodiploma lain, modul online-nya juga hadir dalam bentuk buku berjudul
+        sama
+        yang telah mendapatkan ijin dan ISBN.</p>
+
+    <pre>
+        SAJAK PUTIH
+      
+     Bersandar pada tari warna pelangi
+     Kau depanku bertudung sutra senja
+     Di hitam matamu kembang mawar dan melati
+     Harum rambutmu mengalun bergelut senda
+      
+     Sepi menyanyi, malam dalam mendoa tiba
+     Meriak muka air kolam jiwa
+     Dan dalam dadaku memerdu lagu
+     Menarik menari seluruh aku
+      
+     Hidup dari hidupku, pintu terbuka
+     Selama matamu bagiku menengadah
+     Selama kau darah mengalir dari luka
+     Antara kita Mati datang tidak membelah...
+      
+                        Karya : Chairil Anwar
+     </pre>
+
+    <blockquote>
+        <p>Situs web (bahasa Inggris: website) adalah sekumpulan halaman web yang saling berhubungan yang umumnya berada
+            pada peladen yang sama berisikan kumpulan informasi yang disediakan secara perorangan, kelompok, atau
+            organisasi.</p>
+    </blockquote>
+
+    <h2 id="sejarah">Sejarah</h2>
+    <img src="assets/image/history.jpg" alt="sejarah">
+
+
+    <h2 id="geografis">Geografis</h2>
+    <img src="assets/image/geografis.jpg" alt="geografis">
+
+
+    <h2 id="wisata">Wisata</h2>
+
+
+    <h3>Farm House Lembang</h3>
+    <img src="assets/image/farm-house.jpg" alt="farm house">
+
+
+
+    <h3>Observatorium Bosscha</h3>
+    <img src="assets/image/bosscha.jpg" alt="bosscha">
+
+    <br>
+
+    <!-- Menetapkan ukuran gambar berdasarkan lebar -->
+    <img src="https://raw.githubusercontent.com/dicodingacademy/BelajarDasarPemrogramanWeb/image-assets/dicoding-logo.png"
+        alt="Dicoding Logo" width="500px">
+
+    <br>
+
+    <!-- Menetapkan ukuran gambar berdasarkan tinggi -->
+    <img src="https://raw.githubusercontent.com/dicodingacademy/BelajarDasarPemrogramanWeb/image-assets/dicoding-logo.png"
+        alt="Dicoding Logo" height="100px">
+
+    <br>
+
+    <img src="https://raw.githubusercontent.com/dicodingacademy/BelajarDasarPemrogramanWeb/image-assets/dicoding-logo.png"
+        alt="Dicoding Logo" width="500px" height="200px"> <!-- Jangan lakukan ini! -->
+
+    <h1>Bandung</h1>
+    <p>Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.</p>
+    <ul>
+        <li>Sejarah</li>
+        <li>Geografis</li>
+        <li>Wisata</li>
+    </ul>
+    <h2>Sejarah</h2>
+
+
+    <ul>
+        <li>
+            <h1>Sebuah Heading sebagai item list</h1>
+        </li>
+        <li>
+            <h2>Sebuah Heading level 2 sebagai item list</h2>
+        </li>
+        <li>
+            <p>Sebuah paragraf sebagai item list</p>
+        </li>
+    </ul>
+
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3
+            <ul>
+                <li>List item 3.1</li>
+                <ul>
+                    <li>List item 3.1.1</li>
+                    <li>List item 3.1.2</li>
+                    <li>List item 3.1.3</li>
+                </ul>
+                <li>List item 3.2</li>
+                <li>List item 3.3</li>
+            </ul>
+        </li>
+        <li>List item 4</li>
+    </ul>
+
+    <ol>
+        <li>Langkah pertama</li>
+        <li>Langkah kedua</li>
+        <li>Langkah ketiga</li>
+        <li>Langkah selanjutnya</li>
+    </ol>
+
+    <ol type="I">
+        <li>Langkah pertama</li>
+        <li>Langkah kedua</li>
+        <li>Langkah ketiga</li>
+        <li>Langkah selanjutnya</li>
+    </ol>
+
+    <ol type="A">
+        <li>Langkah pertama</li>
+        <li>Langkah kedua</li>
+        <li>Langkah ketiga</li>
+        <li>Langkah selanjutnya</li>
+    </ol>
+
+    <ol start="7">
+        <li>Langkah ketujuh</li>
+        <li>Langkah kedelapan</li>
+        <li>Langkah kesembilan</li>
+        <li>Langkah selanjutnya</li>
+    </ol>
+
+    <ol reversed>
+        <li>Langkah pertama</li>
+        <li>Langkah kedua</li>
+        <li>Langkah ketiga</li>
+        <li>Langkah selanjutnya</li>
+    </ol>
+
+    <h1>Bandung</h1>
+
+    <h2>Geografis</h2>
+    <p>Kota Bandung dikelilingi oleh pegunungan, sehingga bentuk morfologi wilayahnya bagaikan sebuah mangkok raksasa
+    </p>
+
+    <h2>Wisata</h2>
+    <p>Kota Bandung telah menjadi tujuan utama dalam menikmati liburan akhir pekan terutama dari masyarakat yang berasal
+        dari Jakarta sekitarnya.</p>
+
+    <h3>Farm House Lembang</h3>
+    <h4>Lokasi</h4>
+    <p>Berada di jalur utama Bandung-Lembang, Farm House menjadi objek wisata yang tidak pernah sepi pengunjung.</p>
+
+    <h4>Kondisi</h4>
+    <p>Selain karena letaknya strategis, kawasan ini juga menghadirkan nuansa wisata khas Eropa. Semua itu diterapkan
+        dalam
+        bentuk
+        spot swafoto Instagramable.</p>
+
+    <h3>Observatorium Bosscha</h3>
+    <p>Memiliki beberapa teleskop, antara lain, Refraktor Ganda Zeiss, Schmidt Bimasakti, Refraktor Bamberg,
+        Cassegrain GOTO, dan Teleskop Surya.</p>
+
+    <h1>Bandung</h1>
+    <p>Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.</p>
+
+    <h2>Sejarah</h2>
+    <p>Kata Bandung berasal dari kata bendung atau bendungan karena terbendungnya sungai Citarum oleh lava Gunung
+        Tangkuban Parahu yang lalu membentuk telaga. Legenda yang diceritakan oleh orang-orang tua di
+        Bandung mengatakan bahwa nama Bandung diambil dari sebuah kendaraan air yang terdiri dari dua perahu yang diikat
+        berdampingan yang disebut perahu bandung yang digunakan oleh Bupati Bandung, R.A. Wiranatakusumah II, untuk
+        melayari Ci Tarum dalam mencari tempat kedudukan kabupaten yang baru untuk
+        menggantikan ibu kota yang lama di Dayeuhkolot. </p>
+
+    <p>Berdasarkan filosofi Sunda, kata Bandung juga berasal dari kalimat Nga-Bandung-an Banda Indung, yang merupakan
+        kalimat sakral dan luhur karena mengandung nilai ajaran Sunda. Nga-Bandung-an artinya menyaksikan atau bersaksi.
+        Banda adalah segala sesuatu yang berada di alam hidup yaitu di bumi dan atmosfer, baik makhluk hidup maupun
+        benda mati. Sinonim dari banda adalah harta. Indung berarti Ibu atau Bumi, disebut juga sebagai Ibu Pertiwi
+        tempat Banda berada.</p>
+
+    <h2>Geografis</h2>
+    <p>Kota Bandung dikelilingi oleh pegunungan, sehingga bentuk morfologi wilayahnya bagaikan sebuah mangkok raksasa,
+        secara geografis kota ini terletak di tengah-tengah provinsi Jawa Barat, serta berada pada
+        ketinggian ±768 m di atas permukaan laut, dengan titik tertinggi di berada di sebelah utara dengan ketinggian
+        1.050 meter di atas permukaan laut dan sebelah selatan merupakan kawasan rendah dengan ketinggian 675 meter di
+        atas permukaan laut.</p>
+
+    <p>Kota Bandung dialiri dua sungai utama, yaitu Sungai Cikapundung dan Sungai Citarum beserta anak-anak sungainya
+        yang pada umumnya mengalir ke arah selatan dan bertemu di Sungai Citarum. Dengan kondisi yang
+        demikian, Bandung selatan sangat rentan terhadap masalah banjir terutama pada musim hujan.</p>
+
+    <h2>Wisata</h2>
+    <p>Sejak dibukanya Jalan Tol Cipularang, kota Bandung telah menjadi tujuan utama dalam menikmati liburan akhir pekan
+        terutama dari masyarakat yang berasal dari Jakarta sekitarnya. Selain menjadi kota wisata belanja,
+        kota Bandung juga dikenal dengan sejumlah besar bangunan lama berarsitektur peninggalan Belanda.</p>
+
+    <h3>Farm House Lembang</h3>
+    <p>Berada di jalur utama Bandung-Lembang, Farm House menjadi objek wisata yang tidak pernah sepi pengunjung. Selain
+        karena letaknya strategis, kawasan ini juga menghadirkan nuansa wisata khas Eropa. Semua itu diterapkan dalam
+        bentuk spot swafoto Instagramable.</p>
+
+    <h3>Observatorium Bosscha</h3>
+    <p>Memiliki beberapa teleskop, antara lain, Refraktor Ganda Zeiss, Schmidt Bimasakti, Refraktor Bamberg, Cassegrain
+        GOTO, dan Teleskop Surya. Refraktor Ganda Zeiss adalah jenis teleskop terbesar untuk meneropong bintang. Benda
+        ini diletakkan pada atap kubah sehingga saat teropong digunakan, atap tersebut harus dibuka. Observatorium
+        Bosscha boleh dikunjungi oleh siapapun, tanpa tiket. Namun, bagi yang ingin
+        menggunakan teleskop Zeiss, wajib mendaftarkan diri. Untuk instansi atau lembaga pendidikan, diberikan jadwal
+        hari Selasa sampai Jumat. Sementara itu, kunjungan individu dibuka setiap hari Sabtu.</p>
+
+</body>
+
+</html>

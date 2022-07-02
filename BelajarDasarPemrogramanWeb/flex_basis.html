@@ -1,0 +1,123 @@
+<!-- <!doctype html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 800px;
+            border: 2px solid black;
+            margin: 0 auto;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+        }
+
+        .box {
+            flex-grow: 1;
+            background-color: cornflowerblue;
+            border: 2px solid black;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .double {
+            flex-grow: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex-column">
+            <div class="flex-row">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+            </div>
+            <div class="flex-row">
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box double">7</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html> -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 800px;
+            border: 2px solid black;
+            margin: 0 auto;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+        }
+
+        .box {
+            flex-basis: 25%;
+            background-color: cornflowerblue;
+            border: 2px solid black;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .double {
+            flex-basis: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex-column">
+            <div class="flex-row">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+            </div>
+            <div class="flex-row">
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box double">7</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

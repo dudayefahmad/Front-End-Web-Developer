@@ -1,0 +1,327 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+
+/* untuk offline */
+@font-face {
+    font-family: "Dicoding Font";
+    src: url('FILE-FONT.TTF');
+}
+
+body {
+    /* font-family: "Dicoding Font"; */
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+    overflow: auto;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #00a2c6
+}
+
+/* h2 {
+    color: #00a2c6;
+}
+
+h3 {
+    color: #00a2c6;
+} */
+
+/* or */
+
+h2,
+h3 {
+    color: #00a2c6
+}
+
+/* rule order */
+/* p {
+    color: red;
+}
+
+p {
+    color: blue;
+} */
+
+/* p {
+    color: red !important;
+}
+
+p {
+    color: blue;
+} */
+
+/* Type Selector */
+/* Semua elemen span */
+span {
+    color: red;
+}
+
+/* Class Selector */
+.red {
+    color: red;
+}
+
+.skyblue-bg {
+    background-color: skyblue;
+}
+
+.fancy {
+    font-weight: bold;
+    text-shadow: 4px 4px 3px #77f;
+}
+
+p.fancy {
+    text-shadow: 4px 4px 3px #00c8eb;
+}
+
+/* ID Selector */
+/* Yang harus kita perhatikan kembali adalah id ini bersifat unik. Jika kita ingin menerapkan sebuah rule pada banyak elemen, sebaiknya gunakan atribut class, bukan dengan id. */
+#special {
+    background-color: skyblue;
+}
+
+/* Attribute Selector */
+/* Attribute selector merupakan cara menetapkan target elemen berdasarkan sebuah atribut yang digunakan atau bahkan bisa lebih spesifik dengan nilainya. */
+/* <a> element yang menerapkan href attribut */
+/* a[href] {
+    color: blue;
+} */
+
+/* <a> element yang menerapkan nilai pada href dengan awalan "#" */
+/* a[href^="#"] {
+    background-color: gold;
+} */
+
+/* <a> element yang menerapkan nilai pada href yang mengandung teks "example" */
+a[href*="example"] {
+    background-color: silver;
+}
+
+/* <a> element yang menerapkan nilai pada href yang mengandung teks "insensitive" tidak mementingkan huruf kapital*/
+a[href*="insensitive" i] {
+    color: cyan;
+}
+
+/* <a> element yang menerapkan nilai pada href dengan akhiran ".org" */
+a[href$=".org"] {
+    color: red;
+}
+
+/* Universal Selector */
+/* Universal selector digunakan untuk diterapkan pada seluruh elemen. Tetapi selector ini juga bisa secara spesifik menargetkan sebuah elemen dengan menggabungkan bersama selector yang lainnya. */
+/* Menargetkan seluruh tipe elemen */
+/* * {
+    color: green;
+} */
+
+/* Menargetkan seluruh tipe elemen yang mengandung nilai "en" pada atribut lang */
+*[lang^=en] {
+    font-style: italic;
+}
+
+/* Menargetkan seluruh tipe elemen yang memiliki nilai "warning" pada atribut class */
+*.warning {
+    color: red;
+}
+
+/* Menargetkan seluruh tipe elemen yang memiliki nilai "content" pada atribut id */
+/* *#content {
+    border: 1px solid blue;
+    padding: 20px;
+} */
+
+/* Adjacent Sibling Selector (+)
+Adjacent Sibling Selector menggabungkan dua buah basic selector dengan menggunakan tanda + di antara keduanya. Contohnya seperti ini: */
+/* Adjacent Sibling Selector terdiri dari dua buah target elemen, namun hanya elemen kedua yang menerapkan rule selama elemen tersebut dituliskan langsung setelah elemen pertama pada berkas HTML. Selain itu kedua elemen tersebut harus berada di dalam induk elemen yang sama. */
+/* Rule akan diterapkan pada elemen paragraf yang berada tepat setelah elemen img */
+img+p {
+    color: green;
+}
+
+/* General Sibling Selector (~)
+Mirip seperti Adjacent Sibling Selector namun rules akan diterapkan pada seluruh elemen kedua yang berada setelah elemen pertama. Dengan catatan, induknya sama, walaupun posisi dari elemen kedua tidak berada tepat setelahnya. General Sibling Selector menggunakan tanda ~ untuk menetapkan elemenya. Contohnya seperti berikut: */
+/* Rule akan diterapkan pada elemen header yang berada tepat setelah elemen img */
+img~p {
+    color: green;
+}
+
+/* Child Selector (>)
+Child Selector menggabungkan dua buah basic selector dengan menggunakan tanda greater than (>) di antara basic selector-nya. Contohnya sebagai berikut: */
+/* div>p {
+    background-color: yellow;
+} */
+
+/* Pada contoh di atas, rule akan diterapkan pada seluruh elemen paragraf yang berada di dalam elemen div secara langsung. Dalam arti lain, elemen paragraf merupakan anak dari elemen div secara langsung. */
+/* Descendant Selector (space)
+Descendant Selector mirip seperti child selector namun hierarkinya lebih luas, karena rule akan diterapkan pada seluruh elemen yang menjadi turunannya walaupun secara tidak langsung. Basic selector pertama yang dituliskan pada selector ini menjadi induknya dan basic selector yang kedua merupakan elemen yang akan menerapkan rule. Selector ini menggunakan spasi dalam menggabungkan dua basic selector. */
+/* div p {
+    background-color: yellow;
+} */
+
+/* Pseudo Selector
+Selain beberapa selector yang sudah kita pelajari, CSS masih memiliki dua selector lagi yang dapat kita manfaatkan membantu menyeleksi elemen dalam menerapkan sebuah rule, yakni Pseudo-class dan Pseudo-element.
+
+Sebelum menjelaskan lebih detail tentang kedua selector tersebut, perlu kita ketahui pseudo selector berbeda dari selector yang sudah dibahas sebelumnya, selector ini menargetkan elemen pada bagian yang “tidak terlihat” seperti sifat pada elemen, sehingga untuk menetapkannya, kita tidak bisa menggunakan selector biasa. Salah satu contoh yang paling sering kita terapkan adalah :hover, Pseudo Selector tersebut kita gunakan untuk menetapkan rule ketika cursor diarahkan ke target elemen. */
+a:hover {
+    color: blue;
+}
+
+/* Contoh kode di atas merupakan salah satu pseudo-class selector dimana elemen anchor akan menerapkan warna biru ketika kursor diarahkan pada elemen tersebut. Mari kita bahas lebih detail mengenai pseudo-class selector dan pseudo-element selector.*/
+
+/* Pseudo-class Selector
+Pseudo-class merupakan sebuah class “semu” yang sebenarnya ada pada tiap elemen HTML. Pada contoh sebelumnya kita sudah mengetahui salah satu pseudo-class selector, dengan menggunakan selector ini kita dapat memilih elemen berdasarkan class yang tidak nampak pada dokumen. Kita bisa menetapkan rule hanya ketika sebuah tautan telah dikunjungi (:visited) atau ketika sebuah elemen diarahkan dengan kursor (:hover).
+
+Untuk menggunakan pseudo-class kita gunakan tanda titik dua (:) pada basic selector kemudian diikuti dengan pseudo-class nya. Berikut contoh penerapan beberapa pseudo-class pada sebuah elemen anchor: */
+/* rule akan diterapkan pada sebuah tautan yang belum pernah dikunjungi */
+a:link {
+    color: red;
+}
+
+/* rule akan diterapkan pada sebuah tautan yang sudah pernah dikunjungi */
+/* a:visited {
+    color: green;
+} */
+
+/* rule akan diterapkan pada sebuah tautan ketika diarahkan dengan kursor */
+/* a:hover {
+    color: pink;
+} */
+
+/* rule akan diterapkan pada sebuah tautan ketika ditekan */
+/* a:active {
+    color: orange;
+} */
+
+/* Pseudo-elemen Selector
+Sama seperti pseudo-class, pseudo-elemen merupakan sebuah elemen “semu” yang sebenarnya ada tetapi tidak tampak secara tertulis pada berkas HTML. Selector ini biasa digunakan ketika kita ingin menambahkan sebuah konten tepat sebelum dan setelah sebuah elemen paragraf. Alhasil kita tidak perlu menuliskan struktur elemen tersebut pada berkas HTML. Cukup manfaatkan pseudo-elemen ::before dan ::after kemudian tuliskan konten tersebut cukup pada CSS. Contohnya kita ingin menambahkan tanda kutip sebelum dan sesudah elemen blockquote. Seperti ini cara menuliskannya: */
+blockquote::before,
+blockquote::after {
+    content: '"';
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Untuk menggunakan pseudo-elemen kita gunakan dua buah tanda titik dua (::) kemudian diikuti dengan pseudo-elemen nya. Sebenarnya kita bisa menggunakan satu buah tanda tanda titik dua (:) namun kita perlu membedakannya dengan pseudo-class. Karena itulah baiknya ketika menggunakan pseudo-elemen, gunakanlah dua buah titik dua (::).
+
+Pseudo-element tidak hanya ::before dan ::after. Dengan pseudo-elemen kita juga dapat menentukan rule pada awal karakter konten elemen. */
+/* Rule styling akan diterapkan pada karakter pertama disebuah paragraf */
+/* p::first-letter {
+    font-size: 32px;
+    font-weight: bold;
+    color: saddlebrown;
+} */
+
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+.profile header {
+    text-align: center;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #00a2c6;
+    text-align: center;
+    font-weight: bold;
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile img {
+    width: 200px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.jumbotron {
+    padding: 60px;
+    background-color: #00c8eb;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+nav {
+    background-color: #00a2c6;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+#content {
+    float: left;
+    width: 75%;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Rule yang dituliskan dalam block @media di bawah akan diterapkan pada device yang memiliki ukuran viewport di bawah 992px */
+@media screen and (max-width: 992px) {
+    /* ..... */
+}
+
+/* Rule yang dituliskan dalam block @media di bawah akan diterapkan pada device yang memiliki ukuran viewport di bawah 600px */
+@media screen and (max-width: 600px) {
+    /* ..... */
+}
+
+@media screen and (max-width: 1000px) {
+
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+header {
+    display: inline;
+}
